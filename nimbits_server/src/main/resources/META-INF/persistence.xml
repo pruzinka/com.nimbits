@@ -23,10 +23,10 @@
 
         <exclude-unlisted-classes/>
         <properties>
-            <property name="javax.jdo.option.ConnectionURL" value="jdbc:mysql://sql/nimbits?useServerPrepStmts=false"/>
+            <property name="javax.jdo.option.ConnectionURL" value="jdbc:mysql://localhost/nimbits?useServerPrepStmts=false"/>
             <property name="javax.jdo.option.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
             <property name="javax.jdo.option.ConnectionUserName" value="root"/>
-            <property name="javax.jdo.option.ConnectionPassword" value="nimbits"/>
+            <property name="javax.jdo.option.ConnectionPassword" value="2222"/>
             <property name="javax.jdo.option.Mapping" value="mysql" />
             <property name="datanucleus.schema.autoCreateAll" value="true"/>
         </properties>

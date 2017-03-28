@@ -29,6 +29,7 @@ import com.nimbits.client.model.user.UserModel;
 import com.nimbits.client.model.user.UserSource;
 import com.nimbits.server.transaction.entity.dao.EntityDao;
 import com.nimbits.server.transaction.user.dao.UserDao;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -64,8 +65,8 @@ public class UserService {
 
                 if (basic.equalsIgnoreCase("Basic")) {
                     try {
-                        // String credentials = new String(Base64.decodeBase64(st.nextToken()), "UTF-8");
-                        String credentials = st.nextToken();
+                         String credentials = new String(Base64.decodeBase64(st.nextToken()), "UTF-8");
+                        //String credentials = st.nextToken();
 
                         int p = credentials.indexOf(":");
                         if (p != -1) {
